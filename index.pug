@@ -1,2 +1,16 @@
 extend modules/template.pug
 block content
+
+  .game
+    .welcome
+      h1= "Rock, paper or scissors"
+      h2= "Choose an emoji"
+    .emojis
+      img(src="images/rock.png", alt="Rock")
+      img(src="images/paper.png", alt="Paper")
+      img(src="images/scissors.png", alt="Scissors")
+    .cpu
+      h2= "CPU has chosen"
+      .cpu__container: img(src="", alt="" id="cpuContainer")
+    .result
+      h2(id="resultContainer")

@@ -6,11 +6,10 @@ block content
       h1= "Rock, paper or scissors"
       h2= "Choose an emoji"
     .emojis
-      img(src="images/rock.png", alt="Rock")
-      img(src="images/paper.png", alt="Paper")
-      img(src="images/scissors.png", alt="Scissors")
+      img(src="images/rock.png", alt="Rock" id="rock")
+      img(src="images/paper.png", alt="Paper" id="paper")
+      img(src="images/scissors.png", alt="Scissors" id="scissors")
     .cpu
       h2= "CPU has chosen"
-      .cpu__container: img(src="", alt="" id="cpuContainer")
-    .result
-      h2(id="resultContainer")
+      .cpu__container: img(src="", alt="" id="cpu")
+    .result: h2(id="result")

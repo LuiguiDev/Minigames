@@ -4,16 +4,17 @@ let user;
 
 const game = (user, cpu) => {
   switch (true){
-    case (user == "rock" && cpu == "scissors"):
+    case 1(user == "rock" && cpu == "scissors"):
+      
       //YouWin!
       break
-    case (user == "paper" && cpu == "scissors"):
+    case 2(user == "paper" && cpu == "scissors"):
       //YouWin!
       break
-    case (user == "scissors" && cpu == "paper"):
+    case 3(user == "scissors" && cpu == "paper"):
       //YouWin!
       break
-    case (user == cpu):
+    case 4(user == cpu):
       //Tie
       break
     default:

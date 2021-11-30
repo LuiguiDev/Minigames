@@ -9,19 +9,37 @@
     <link rel="stylesheet" href="mobile.css" media="screen and (max-width:480px)">
   </head>
   <body>
+    <header>
+      <h2>Minigames.js</h2>
+    </header>
     <div class="game">
       <div class="welcome">
         <h1>Rock, paper or scissors</h1>
         <h2>Choose an emoji</h2>
       </div>
-      <div class="emojis"><img src="images/rock.png" alt="Rock"><img src="images/paper.png" alt="Paper"><img src="images/scissors.png" alt="Scissors"></div>
+      <div class="emojis"><img src="images/rock.png" alt="Rock" id="rock"><img src="images/paper.png" alt="Paper" id="paper"><img src="images/scissors.png" alt="Scissors" id="scissors"></div>
       <div class="cpu">
         <h2>CPU has chosen</h2>
-        <div class="cpu__container"><img src="" alt="" id="cpuContainer"></div>
+        <div class="cpu__container"><img src="" alt="" id="cpu"></div>
       </div>
       <div class="result">
-        <h2 id="resultContainer"></h2>
+        <h2 id="result"></h2>
       </div>
     </div>
+    <div class="goodbye">
+      <h2>Thanks for playing</h2>
+    </div>
+    <footer> 
+      <div class="media">
+        <p class="follow">Follow Me</p><a class="twitter" href="https://twitter.com/_Luigui___" target="blank" alt="Logo de twitter"></a><a class="github" href="https://github.com/luigui-arc" target="blank" alt="Logo de github"></a><a class="linkedin" href="https://www.linkedin.com/in/luis-rodr%C3%ADguez-7099401b6/" target="blank" alt="Logo de linkedln"></a>
+      </div>
+      <div class="contact">
+        <p>Contact me</p>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input class="message" type="text" placeholder="Message">
+        <button>Send</button>
+      </div>
+    </footer>
   </body>
 </html>

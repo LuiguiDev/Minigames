@@ -1,3 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap");
+body {
+  margin: 0;
+  font-family: "Ubuntu";
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+p {
+  font-weight: 400;
+}
+
+header {
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
 .game {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,6 +42,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 50%;
+  margin: auto;
 }
 .game .welcome {
   display: -webkit-box;
@@ -26,9 +61,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   height: 75px;
   -o-object-fit: cover;
@@ -37,4 +71,101 @@
 .game .emojis img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+.game .cpu {
+  margin-top: 50px;
+}
+.game .cpu__container {
+  height: 75px;
+}
+.game .result {
+  height: 30px;
+}
+
+.goodbye {
+  color: black;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .media {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+footer .media .follow {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .media a {
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+footer .media .twitter {
+  background-image: url("images/twiter.png");
+}
+footer .media .github {
+  background-image: url("images/github.png");
+}
+footer .media .linkedin {
+  background-image: url("images/linkedin.png");
+}
+footer .contact {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .contact input {
+  margin-bottom: 5px;
+  width: 100%;
+  border-radius: 10px;
+  height: 25px;
+}
+footer .contact .message {
+  height: 50px;
+}
+footer .contact button {
+  height: 25px;
+  text-decoration: none;
+  width: 50%;
+  border-radius: 10px;
 }

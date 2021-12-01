@@ -17,7 +17,10 @@
         <h1>Rock, paper or scissors</h1>
         <h2>Choose an emoji</h2>
       </div>
-      <div class="emojis"><img src="images/rock.png" alt="Rock" id="rock"><img src="images/paper.png" alt="Paper" id="paper"><img src="images/scissors.png" alt="Scissors" id="scissors"></div>
+      <div class="emojis">
+        <input type="image" src="images/rock.png" value="none" id="rock"><img class="emoji" src="images/paper.png" alt="Paper" id="paper"><img class="emoji" src="images/scissors.png" alt="Scissors" id="scissors">
+      </div>
+      <button type="button">Play</button>
       <div class="cpu">
         <h2>CPU has chosen</h2>
         <div class="cpu__container"><img src="" alt="" id="cpu"></div>
@@ -26,6 +29,7 @@
         <h2 id="result"></h2>
       </div>
     </div>
+    <script src="logic.js"> </script>
     <div class="goodbye">
       <h2>Thanks for playing</h2>
     </div>

@@ -76,10 +76,13 @@ const winner = (winner) => {
   let writer = document.getElementById('result')
   if (winner == 'user') {
     writer.innerText = 'You win!'
+    writer.classList.add('win')
   }else if (winner == 'cpu'){
     writer.innerText = 'You lost'
+    writer.classList.add('lost')
   }else {
     writer.innerText = 'It\'s a tie'
+    writer.classList.add('tie')
   }
 }
 const game = (user, cpu) => {  
@@ -87,23 +90,18 @@ const game = (user, cpu) => {
   switch (true){
     case (user == "rock" && cpu == "scissors"):
       winner('user')
-      //YouWin!
       break
     case (user == "paper" && cpu == "rock"):
       winner('user')
-      //YouWin!
       break
     case (user == "scissors" && cpu == "paper"):
       winner('user')
-      //YouWin!
       break
     case (user == cpu):
       winner('tie')
-      //Tie
       break
     default:
       winner('cpu')
-      //cpuWin
   }
 }
 const startGame = () => {  
@@ -111,6 +109,29 @@ const startGame = () => {
   if (user == false){
     window.alert('Select an emoji')
   }else {
-    game(user, cpu) 
+    game(user, cpu)
+    start.classList.add('reset')
+    start.innerText = 'Reset'
   }  
+}
+const resetGame = () => {
+  let start = document.getElementById('play')
+  let advice = document.getElementById('advice')
+  let container = document.getElementById('cpu')
+  let writer = document.getElementById('result')
+  let hideSelected = document.querySelector('#' + user)
+
+  if (start.classList.contains('reset')){
+    hideSelected.classList.remove('selected')
+    user = false;
+    cpu = signs[Math.floor(Math.random() * 3)];    
+    advice.classList.add('hidden')
+    container.setAttribute('src', ' ')
+    start.classList.remove('reset')
+    start.innerText = 'Play'
+    writer.innerText = ' '    
+  }else {
+    startGame();
+
+  }
 }

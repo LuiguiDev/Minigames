@@ -13,15 +13,17 @@
       <h2>Minigames.js</h2>
     </header>
     <div class="game">
-      <div class="welcome">
+      <div class="game__name">
         <h1>Rock, paper or scissors</h1>
-        <h2>Choose an emoji</h2>
       </div>
-      <div class="emojis"><img class="emoji" src="images/rock.png" value="none" id="rock"><img class="emoji" src="images/paper.png" alt="Paper" id="paper"><img class="emoji" src="images/scissors.png" alt="Scissors" id="scissors"></div>
-      <button type="button" onclick="startGame()" id="play">Play</button>
+      <div class="game__user">
+        <h2>Choose an emoji</h2>
+        <div class="emojis"><img class="emoji" src="images/rock.png" value="none" id="rock"><img class="emoji" src="images/paper.png" alt="Paper" id="paper"><img class="emoji" src="images/scissors.png" alt="Scissors" id="scissors"></div>
+      </div>
+      <button type="button" onclick="resetGame()" id="play">Play</button>
       <div class="cpu">
         <h2 class="hidden" id="advice">CPU has chosen</h2>
-        <div class="emojis"><img src="" alt="" id="cpu"></div>
+        <div class="cpu__emoji"><img src="" alt="" id="cpu"></div>
       </div>
       <div class="result">
         <h2 id="result"></h2>
@@ -29,7 +31,7 @@
     </div>
     <script src="logic.js"> </script>
     <div class="goodbye">
-      <h2>Thanks for playing</h2>
+      <h3>Thanks for playing</h3>
     </div>
     <footer> 
       <div class="media">

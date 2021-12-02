@@ -2,17 +2,18 @@ extend modules/template.pug
 block content
 
   .game
-    .welcome
+    .game__name
       h1= "Rock, paper or scissors"
+    .game__user
       h2= "Choose an emoji"
-    .emojis
-      img(src="images/rock.png" value="none" id="rock").emoji
-      img(src="images/paper.png", alt="Paper" id="paper").emoji
-      img(src="images/scissors.png", alt="Scissors" id="scissors").emoji
-    button(type="button" onclick="startGame()" id="play")="Play"
+      .emojis
+        img(src="images/rock.png" value="none" id="rock").emoji
+        img(src="images/paper.png", alt="Paper" id="paper").emoji
+        img(src="images/scissors.png", alt="Scissors" id="scissors").emoji
+    button(type="button" onclick="resetGame()" id="play")="Play"
     .cpu
       h2(id = "advice").hidden= "CPU has chosen"
-      .emojis: img(src="", alt="" id="cpu")
+      .cpu__emoji: img(src="", alt="" id="cpu")
     .result: h2(id="result")
   
   script(src="logic.js") 

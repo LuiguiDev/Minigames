@@ -1,0 +1,12 @@
+$spacing: 40px;
+$midSpacing: 20px;
+
+@mixin emojiStyle {
+  display: flex;
+  justify-content: space-around;
+  height: 75px;
+  width: 100%;
+  object-fit: cover;
+  margin-top: $midSpacing;  
+}
+

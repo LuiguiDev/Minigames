@@ -2,37 +2,67 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 90%;
   margin: auto;
-  .welcome{
+  &__name{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: $spacing;
   }
-  .emojis{
+  &__user{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $spacing;
     width: 100%;
-    height: 75px;
-    object-fit: cover;
-    .emoji:hover{
-      box-shadow: 10px 5px 5px rgba(107, 107, 107, 0.616)
+    .emojis{
+      @include emojiStyle;
+      img{
+        width: 75px;
+      }
+      .emoji:hover{
+        box-shadow: 10px 5px 5px rgba(107, 107, 107, 0.616)
+      }
+      .selected{
+        box-shadow: 5px 5px 15px rgba(59, 59, 238, 0.616)
+      }
+      img{
+        object-fit: contain;
+      }
     }
-    .selected{
-      border: 5px, solid, blue;
-      box-shadow: 10px 5px 5px rgba(59, 59, 238, 0.616)
-    }
-    img{
-      object-fit: contain;
-    }
+  }
+  button{
+    margin-top: $midSpacing;
+    height: 30px;
+    text-decoration: none;
+    width: 75px;
+    border-radius: 10px;
+    border-color:white;
+    border-style: solid;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    color: white;
+    background-color: black;
   }
   .cpu{
-    margin-top: 50px;    
-    &__container{
-      height: 75px;
+    margin-top: $spacing;    
+    height: 120px;
+    &__emoji{
+      @include emojiStyle
     }
   }
   .result{
-    height: 30px;
+    height: 1.5em;
+    margin-top: $spacing;
+    .win{
+      color: green;     
+    }
+    .lost{
+      color: rgb(230, 15, 15);
+    }
+    .tie{
+      color: rgb(202, 133, 5);
+    }
   }
 }

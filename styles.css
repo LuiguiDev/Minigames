@@ -7,14 +7,23 @@ body {
 h1 {
   font-style: italic;
   font-weight: 500;
+  margin: 0;
 }
 
 h2 {
   font-weight: 400;
+  margin: 0;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 0;
 }
 
 p {
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .hidden {
@@ -30,9 +39,13 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-style: italic;
+  height: 55px;
 }
 
 .game {
@@ -46,10 +59,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  width: 90%;
   margin: auto;
 }
-.game .welcome {
+.game__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,39 +73,90 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 40px;
 }
-.game .emojis {
+.game__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+.game__user .emojis {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100%;
   height: 75px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-top: 20px;
 }
-.game .emojis .emoji:hover {
+.game__user .emojis img {
+  width: 75px;
+}
+.game__user .emojis .emoji:hover {
   -webkit-box-shadow: 10px 5px 5px rgba(107, 107, 107, 0.616);
           box-shadow: 10px 5px 5px rgba(107, 107, 107, 0.616);
 }
-.game .emojis .selected {
-  border: 5px, solid, blue;
-  -webkit-box-shadow: 10px 5px 5px rgba(59, 59, 238, 0.616);
-          box-shadow: 10px 5px 5px rgba(59, 59, 238, 0.616);
+.game__user .emojis .selected {
+  -webkit-box-shadow: 5px 5px 15px rgba(59, 59, 238, 0.616);
+          box-shadow: 5px 5px 15px rgba(59, 59, 238, 0.616);
 }
-.game .emojis img {
+.game__user .emojis img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.game .cpu {
-  margin-top: 50px;
+.game button {
+  margin-top: 20px;
+  height: 30px;
+  text-decoration: none;
+  width: 75px;
+  border-radius: 10px;
+  border-color: white;
+  border-style: solid;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  color: white;
+  background-color: black;
 }
-.game .cpu__container {
+.game .cpu {
+  margin-top: 40px;
+  height: 120px;
+}
+.game .cpu__emoji {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 75px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 20px;
 }
 .game .result {
-  height: 30px;
+  height: 1.5em;
+  margin-top: 40px;
+}
+.game .result .win {
+  color: green;
+}
+.game .result .lost {
+  color: #e60f0f;
+}
+.game .result .tie {
+  color: #ca8505;
 }
 
 .goodbye {
@@ -104,15 +168,22 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 40px;
 }
 
 footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: black;
   color: white;
-  height: 300px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -155,6 +226,7 @@ footer .media .linkedin {
   background-image: url("images/linkedin.png");
 }
 footer .contact {
+  margin-top: 40px;
   width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,8 +249,8 @@ footer .contact .message {
   height: 50px;
 }
 footer .contact button {
-  height: 25px;
+  height: 30px;
   text-decoration: none;
-  width: 50%;
+  width: 150px;
   border-radius: 10px;
 }

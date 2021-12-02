@@ -6,13 +6,13 @@ block content
       h1= "Rock, paper or scissors"
       h2= "Choose an emoji"
     .emojis
-      input(type="image" src="images/rock.png" value="none" id="rock")
+      img(src="images/rock.png" value="none" id="rock").emoji
       img(src="images/paper.png", alt="Paper" id="paper").emoji
       img(src="images/scissors.png", alt="Scissors" id="scissors").emoji
-    button(type="button")="Play"
+    button(type="button" onclick="startGame()" id="play")="Play"
     .cpu
-      h2= "CPU has chosen"
-      .cpu__container: img(src="", alt="" id="cpu")
+      h2(id = "advice").hidden= "CPU has chosen"
+      .emojis: img(src="", alt="" id="cpu")
     .result: h2(id="result")
   
   script(src="logic.js") 

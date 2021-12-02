@@ -17,13 +17,11 @@
         <h1>Rock, paper or scissors</h1>
         <h2>Choose an emoji</h2>
       </div>
-      <div class="emojis">
-        <input type="image" src="images/rock.png" value="none" id="rock"><img class="emoji" src="images/paper.png" alt="Paper" id="paper"><img class="emoji" src="images/scissors.png" alt="Scissors" id="scissors">
-      </div>
-      <button type="button">Play</button>
+      <div class="emojis"><img class="emoji" src="images/rock.png" value="none" id="rock"><img class="emoji" src="images/paper.png" alt="Paper" id="paper"><img class="emoji" src="images/scissors.png" alt="Scissors" id="scissors"></div>
+      <button type="button" onclick="startGame()" id="play">Play</button>
       <div class="cpu">
-        <h2>CPU has chosen</h2>
-        <div class="cpu__container"><img src="" alt="" id="cpu"></div>
+        <h2 class="hidden" id="advice">CPU has chosen</h2>
+        <div class="emojis"><img src="" alt="" id="cpu"></div>
       </div>
       <div class="result">
         <h2 id="result"></h2>

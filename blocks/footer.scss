@@ -32,16 +32,10 @@ footer{
       margin: 15px;
       background-repeat: no-repeat;
       background-size:contain;
-    }
-    .twitter{
-      background-image: url("images/twiter.png");
-    }
-    .github{
-      background-image: url("images/github.png");
-    }
-    .linkedin{
-      background-image: url("images/linkedin.png");
-    }
+      font-size: 35px;
+      color: white;
+      text-decoration: none;
+    }    
   }
   .contact{
     margin-top: $spacing;

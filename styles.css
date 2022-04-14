@@ -140,12 +140,12 @@ header {
   width: 75px;
 }
 .game__user .emojis .emoji:hover {
-  -webkit-box-shadow: 10px 5px 5px rgba(107, 107, 107, 0.616);
-          box-shadow: 10px 5px 5px rgba(107, 107, 107, 0.616);
+  -webkit-filter: drop-shadow(10px 5px 5px rgba(107, 107, 107, 0.616));
+          filter: drop-shadow(10px 5px 5px rgba(107, 107, 107, 0.616));
 }
 .game__user .emojis .selected {
-  -webkit-box-shadow: 5px 5px 15px rgba(59, 59, 238, 0.616);
-          box-shadow: 5px 5px 15px rgba(59, 59, 238, 0.616);
+  -webkit-filter: drop-shadow(3px 3px 1px rgba(59, 59, 238, 0.616));
+          filter: drop-shadow(3px 3px 1px rgba(59, 59, 238, 0.616));
 }
 .game__user .emojis img {
   -o-object-fit: contain;

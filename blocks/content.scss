@@ -22,10 +22,10 @@
         width: 75px;
       }
       .emoji:hover{
-        box-shadow: 10px 5px 5px rgba(107, 107, 107, 0.616)
+        filter: drop-shadow(10px 5px 5px rgba(107, 107, 107, 0.616)); 
       }
       .selected{
-        box-shadow: 5px 5px 15px rgba(59, 59, 238, 0.616)
+        filter: drop-shadow(3px 3px 1px rgba(59, 59, 238, 0.616)); 
       }
       img{
         object-fit: contain;

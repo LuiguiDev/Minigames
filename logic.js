@@ -127,6 +127,7 @@ const resetGame = () => {
     cpu = signs[Math.floor(Math.random() * 3)];    
     advice.classList.add('hidden')
     container.setAttribute('src', ' ')
+    result.setAttribute("class", "")
     start.classList.remove('reset')
     start.innerText = 'Play'
     writer.innerText = ' '    
